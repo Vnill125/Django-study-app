@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% if delete == 'room' %}
+
+<form method='POST' action=''> 
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{obj.name}}" ?</p>
+    <a href="{{request.META.HTTP_REFERER}}">Go Back</a>
+    <input type='submit' value="Confirm"/>
+</form>
+
+
+
+{% else %}
+
+<form method='POST' action=''> 
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{obj.body}}" ?</p>
+    <a href="{{request.META.HTTP_REFERER}}">Go Back</a>
+    <input type='submit' value="Confirm"/>
+</form>
+
+{% endif %}
+
+{% endblock content %}
