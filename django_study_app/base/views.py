@@ -10,7 +10,6 @@ from django.contrib import messages
 
 # Create your views here.
 
-
 def loginPage(request):
     page = 'login'
     if request.user.is_authenticated:
